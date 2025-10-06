@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'widgets/gender_selection.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,12 @@ class MyApp extends StatelessWidget {
             ),
             centerTitle: true,
           ),
-          body: Center(child: Text("Center")),
+          body: Column(
+            children: [
+              SizedBox(height: 10),
+              GenderSelection(), //!
+            ],
+          ),
         ),
       ),
     );
