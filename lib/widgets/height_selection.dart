@@ -12,15 +12,29 @@ class _HeightSelectionState extends State<HeightSelection> {
 
   @override
   Widget build(BuildContext context) {
-    return Slider(
-      value: _value,
-      min: 0.0,
-      max: 100.0,
-      onChanged: (value) {
-        setState(() {
-          _value = value;
-        });
-      },
+    return Container(
+      margin: EdgeInsets.all(10),
+      padding: EdgeInsets.all(30),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.grey),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Column(
+        children: [
+          Text("Height"),
+          Text(_value.toString()),
+          Slider(
+            value: _value,
+            min: 0.0,
+            max: 100.0,
+            onChanged: (value) {
+              setState(() {
+                _value = value;
+              });
+            },
+          ),
+        ],
+      ),
     );
   }
 }

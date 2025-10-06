@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
             children: [
               SizedBox(height: 10),
               GenderSelection(), //!
+              SizedBox(height: 10),
               HeightSelection(),
             ],
           ),
