@@ -9,9 +9,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: Center(
-        child: Text("Start Here"),
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: const Color.fromARGB(255, 157, 43, 250),
+            title: Text(
+              "BMI Calculator",
+              style: TextStyle(color: Colors.white),
+            ),
+            centerTitle: true,
+          ),
+          body: Center(child: Text("Center")),
+        ),
       ),
     );
   }
