@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'widgets/gender_selection.dart';
+import 'widgets/height_selection.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
             children: [
               SizedBox(height: 10),
               GenderSelection(), //!
+              HeightSelection(),
             ],
           ),
         ),
